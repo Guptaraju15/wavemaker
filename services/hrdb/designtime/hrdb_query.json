@@ -1,0 +1,214 @@
+{
+  "name" : "hrdb",
+  "description" : "Queries for hrdb",
+  "queries" : [ {
+    "name" : "EmployeeListOf_DeptId1",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 1",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbEmployeeListOf_DeptId1rtnType"
+  }, {
+    "name" : "EmployeeListOf_DeptId2",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 2",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbEmployeeListOf_DeptId2rtnType"
+  }, {
+    "name" : "Srv_Var_EmployeeCount",
+    "query" : "SELECT COUNT(eid) FROM Employee",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbSrv_Var_EmployeeCountrtnType"
+  }, {
+    "name" : "TotalBudget",
+    "query" : "SELECT SUM(budget) FROM department",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "checking",
+    "query" : "select * from employee",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "EmploteeList",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 4",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "EmployeeListOf_DeptId5",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 5",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbEmployeeListOf_DeptId5rtnType"
+  }, {
+    "name" : "EmployeeListOf_DeptId4",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 4",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "SearchEmployees",
+    "query" : "select E.*,D.NAME from EMPLOYEE E,DEPARTMENT D where E.DEPTID=D.DEPTID",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "NoOfDepartment",
+    "query" : "SELECT COUNT(NAME) FROM DEPARTMENT",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "SelectEmployeeVar",
+    "query" : "select * from Employee E where eid=:SearchID or eid=:LiveListID",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "SearchID",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    }, {
+      "paramName" : "LiveListID",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : null
+  }, {
+    "name" : "SelectEmployee",
+    "query" : "select * from Employee E where eid=:SearchID or eid=:LiveListID",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "SearchID",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    }, {
+      "paramName" : "LiveListID",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : "hrdbSelectEmployeertnType"
+  }, {
+    "name" : "EmployeeListOf_Deptid3",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 3",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : null
+  }, {
+    "name" : "_ColleagueDetails",
+    "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID =:selectedemployeedeptid AND e.EID !=:selectedemployeeid",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "selectedemployeedeptid",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    }, {
+      "paramName" : "selectedemployeeid",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : null
+  }, {
+    "name" : "EmployeeSelectVar",
+    "query" : "select * from employee where eid=:SelectedEmployee",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ {
+      "paramName" : "SelectedEmployee",
+      "paramType" : "java.lang.Integer",
+      "testValue" : null,
+      "systemParamName" : null,
+      "systemParam" : false,
+      "list" : false
+    } ],
+    "outputType" : null
+  }, {
+    "name" : "DepartmentCount",
+    "query" : "SELECT COUNT(NAME) FROM DEPARTMENT",
+    "comment" : "",
+    "description" : null,
+    "nativeSql" : true,
+    "returnsSingleResult" : false,
+    "update" : false,
+    "queryParams" : [ ],
+    "outputType" : "hrdbDepartmentCountrtnType"
+  } ]
+}

@@ -1,0 +1,3182 @@
+{
+  "AddEmployee" : {
+    "_id" : "wm-AddEmployee-wm.LiveVariable-1442985498723",
+    "name" : "AddEmployee",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "insert",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ {
+      "value" : "bind:Widgets.firstname.datavalue",
+      "target" : "firstname",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.lastname.datavalue",
+      "target" : "lastname",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.street.datavalue",
+      "target" : "street",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.city.datavalue",
+      "target" : "city",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.state.datavalue",
+      "target" : "state",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.zip.datavalue | toNumber",
+      "target" : "zip",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.birthdate.datavalue",
+      "target" : "birthdate",
+      "type" : "date"
+    }, {
+      "value" : "bind:Widgets.fileupload1.uploadedFiles[0].path",
+      "target" : "picurl",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.twitterid.datavalue",
+      "target" : "twitterid",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.deptname.datavalue | toNumber",
+      "target" : "department",
+      "type" : "number"
+    }, {
+      "value" : "bind:Widgets.managerid.datavalue | toNumber",
+      "target" : "employeeByManagerid",
+      "type" : "number"
+    } ],
+    "type" : "Employee",
+    "isList" : false,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "onSuccess" : "CreateUsers",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "hrdb",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "department",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "DEPTID",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "generator" : "assigned",
+        "isRelated" : true,
+        "relatedTableName" : "DEPARTMENT",
+        "relatedEntityName" : "Department",
+        "relatedFieldName" : "department.deptid",
+        "isList" : false,
+        "targetTable" : "DEPARTMENT",
+        "columns" : [ {
+          "fieldName" : "deptid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "DEPTID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "identity",
+          "isRelated" : false
+        }, {
+          "fieldName" : "name",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "NAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "budget",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "BUDGET",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q1",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q1",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q2",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q2",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q3",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q3",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q4",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q4",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "deptcode",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "DEPTCODE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 20,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "location",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "LOCATION",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "tenantid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "TENANTID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        } ]
+      }, {
+        "fieldName" : "employeeByManagerid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "MANAGERID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "isRelated" : true,
+        "relatedTableName" : "EMPLOYEE",
+        "relatedEntityName" : "Employee",
+        "relatedFieldName" : "employeeByManagerid.eid",
+        "targetTable" : "EMPLOYEE",
+        "columns" : [ {
+          "fieldName" : "department",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "DEPTID",
+          "isPrimaryKey" : false,
+          "notNull" : true,
+          "length" : 255,
+          "generator" : "assigned",
+          "isRelated" : true,
+          "relatedTableName" : "DEPARTMENT",
+          "relatedEntityName" : "Department",
+          "relatedFieldName" : "department.deptid",
+          "isList" : false,
+          "targetTable" : "DEPARTMENT",
+          "columns" : [ {
+            "fieldName" : "deptid",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "DEPTID",
+            "isPrimaryKey" : true,
+            "notNull" : true,
+            "length" : 255,
+            "precision" : 19,
+            "generator" : "identity",
+            "isRelated" : false
+          }, {
+            "fieldName" : "name",
+            "type" : "string",
+            "hibernateType" : "string",
+            "fullyQualifiedType" : "string",
+            "columnName" : "NAME",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "budget",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "BUDGET",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q1",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q1",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q2",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q2",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q3",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q3",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q4",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q4",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "deptcode",
+            "type" : "string",
+            "hibernateType" : "string",
+            "fullyQualifiedType" : "string",
+            "columnName" : "DEPTCODE",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 20,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "location",
+            "type" : "string",
+            "hibernateType" : "string",
+            "fullyQualifiedType" : "string",
+            "columnName" : "LOCATION",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "tenantid",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "TENANTID",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          } ]
+        }, {
+          "fieldName" : "employeeByManagerid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "MANAGERID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "isRelated" : true,
+          "relatedTableName" : "EMPLOYEE",
+          "relatedEntityName" : "Employee",
+          "targetTable" : "EMPLOYEE"
+        }, {
+          "fieldName" : "eid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "EID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "identity",
+          "isRelated" : false
+        }, {
+          "fieldName" : "firstname",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "FIRSTNAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "lastname",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "LASTNAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "street",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "STREET",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "city",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "CITY",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "state",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "STATE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 2,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "zip",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "ZIP",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "birthdate",
+          "type" : "date",
+          "hibernateType" : "date",
+          "fullyQualifiedType" : "date",
+          "columnName" : "BIRTHDATE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 10,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "picurl",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "PICURL",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "tenantid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "TENANTID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "jobtitle",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "JOBTITLE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 40,
+          "precision" : 19,
+          "isRelated" : false
+        } ]
+      }, {
+        "fieldName" : "eid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "EID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false
+      }, {
+        "fieldName" : "firstname",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "FIRSTNAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "lastname",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "LASTNAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "street",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "STREET",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "city",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "CITY",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "state",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "STATE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 2,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "zip",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ZIP",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "birthdate",
+        "type" : "date",
+        "hibernateType" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "BIRTHDATE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 10,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "picurl",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "PICURL",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "tenantid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TENANTID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "jobtitle",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "JOBTITLE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 40,
+        "precision" : 19,
+        "isRelated" : false
+      } ],
+      "entityName" : "Employee",
+      "fullyQualifiedName" : "com.hrdb.Employee",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "eid" ]
+    },
+    "tableName" : "EMPLOYEE",
+    "tableType" : "TABLE",
+    "properties" : [ "department", "employeeByManagerid", "employeesForManagerid" ],
+    "relatedTables" : [ {
+      "columnName" : "department",
+      "relationName" : "department",
+      "type" : "Department",
+      "watchOn" : "HrdbDepartmentData",
+      "package" : "com.hrdb.Employee"
+    }, {
+      "columnName" : "employeeByManagerid",
+      "relationName" : "employeeByManagerid",
+      "type" : "Employee",
+      "watchOn" : "HrdbEmployeeData",
+      "package" : "com.hrdb.Employee"
+    }, {
+      "columnName" : "employeeByManagerid",
+      "relationName" : "employeesForManagerid",
+      "type" : "Employee",
+      "watchOn" : "HrdbEmployeeData",
+      "package" : "com.hrdb.Employee"
+    } ],
+    "filterFields" : { },
+    "inputFields" : { },
+    "package" : "com.hrdb.Employee"
+  },
+  "CreateUsers" : {
+    "_id" : "wm-CreateUsers-wm.LiveVariable-1442985618394",
+    "name" : "CreateUsers",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "insert",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ {
+      "value" : "bind:Widgets.firstname.datavalue",
+      "target" : "username",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.password.datavalue",
+      "target" : "password",
+      "type" : "string"
+    }, {
+      "value" : "bind:Widgets.role.datavalue",
+      "target" : "role",
+      "type" : "string"
+    } ],
+    "type" : "User",
+    "isList" : false,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "onSuccess" : "goToPage_Main",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "hrdb",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "userid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "USERID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false
+      }, {
+        "fieldName" : "username",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "USERNAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "password",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "PASSWORD",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "role",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ROLE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "tenantid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TENANTID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      } ],
+      "entityName" : "User",
+      "fullyQualifiedName" : "com.hrdb.User",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "userid" ]
+    },
+    "tableName" : "USER",
+    "tableType" : "TABLE",
+    "filterFields" : { },
+    "inputFields" : { },
+    "package" : "com.hrdb.User"
+  },
+  "FileServiceDeleteFile" : {
+    "_id" : "wm-FileServiceDeleteFile-wm.ServiceVariable-1442930354350",
+    "name" : "FileServiceDeleteFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "boolean",
+    "service" : "FileService",
+    "operation" : "deleteFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/file",
+      "methodType" : "delete",
+      "name" : "deleteFile",
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceGetDownloadFile" : {
+    "_id" : "wm-FileServiceGetDownloadFile-wm.ServiceVariable-1442930354346",
+    "name" : "FileServiceGetDownloadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "com.wavemaker.runtime.file.model.DownloadResponse",
+    "service" : "FileService",
+    "operation" : "getDownloadFile",
+    "operationType" : "get",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/downloadFile",
+      "methodType" : "get",
+      "name" : "getDownloadFile",
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query"
+      }, {
+        "name" : "returnName",
+        "parameterType" : "query"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceGetDownloadFileAsInline" : {
+    "_id" : "wm-FileServiceGetDownloadFileAsInline-wm.ServiceVariable-1442930354349",
+    "name" : "FileServiceGetDownloadFileAsInline",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "com.wavemaker.runtime.file.model.DownloadResponse",
+    "service" : "FileService",
+    "operation" : "getDownloadFileAsInline",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/downloadFileAsInline",
+      "methodType" : "get",
+      "name" : "getDownloadFileAsInline",
+      "parameters" : [ {
+        "name" : "file",
+        "parameterType" : "query"
+      }, {
+        "name" : "returnName",
+        "parameterType" : "query"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceListFiles" : {
+    "_id" : "wm-FileServiceListFiles-wm.ServiceVariable-1442930354350",
+    "name" : "FileServiceListFiles",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "com.hr_scaffold.fileservice.FileService.WMFile",
+    "service" : "FileService",
+    "operation" : "listFiles",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/files",
+      "methodType" : "post",
+      "name" : "listFiles",
+      "parameters" : [ ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "FileServiceUploadFile" : {
+    "_id" : "wm-FileServiceUploadFile-wm.ServiceVariable-1442930354351",
+    "name" : "FileServiceUploadFile",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "com.hr_scaffold.fileservice.FileService.FileUploadResponse",
+    "service" : "FileService",
+    "operation" : "uploadFile",
+    "serviceType" : "JavaService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/file/uploadFile",
+      "methodType" : "post",
+      "name" : "uploadFile",
+      "consumes" : [ "multipart/form-data" ],
+      "parameters" : [ {
+        "name" : "formdata",
+        "parameterType" : "formData"
+      }, {
+        "name" : "relativePath",
+        "parameterType" : "query"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "GoogleapisInvoke" : {
+    "_id" : "wm-GoogleapisInvoke-wm.ServiceVariable-1442932623037",
+    "name" : "GoogleapisInvoke",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "googleapis.RootResponse",
+    "service" : "googleapis",
+    "operation" : "invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/googleapis/invoke",
+      "methodType" : "get",
+      "name" : "invoke",
+      "consumes" : [ "text/xml" ],
+      "parameters" : [ {
+        "name" : "address",
+        "parameterType" : "query"
+      } ]
+    },
+    "dataBinding" : [ {
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.street+''+Widgets.EmployeeGrid1.selecteditem.city+''+Widgets.EmployeeGrid1.selecteditem.state",
+      "target" : "address",
+      "type" : "java.lang.String"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "goToPage_Departments" : {
+    "_id" : "wm-goToPage_Departments-wm.NavigationVariable-1442928054093",
+    "name" : "goToPage_Departments",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Departments"
+  },
+  "goToPage_EmployeeDetails" : {
+    "_id" : "wm-goToPage_EmployeeDetails-wm.NavigationVariable-1442928518626",
+    "name" : "goToPage_EmployeeDetails",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "EmployeeDetails"
+  },
+  "goToPage_EmployeesView" : {
+    "_id" : "wm-goToPage_EmployeesView-wm.NavigationVariable-1442927944118",
+    "name" : "goToPage_EmployeesView",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "EmployeesView"
+  },
+  "goToPage_Main" : {
+    "_id" : "wm-goToPage_Main-wm.NavigationVariable1389180517517",
+    "name" : "goToPage_Main",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Main"
+  },
+  "goToPage_Page" : {
+    "_id" : "wm-goToPage_Page-wm.NavigationVariable-1444369485402",
+    "name" : "goToPage_Page",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Page"
+  },
+  "goToPage_sample" : {
+    "_id" : "wm-goToPage_sample-wm.NavigationVariable-1443701912913",
+    "name" : "goToPage_sample",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "sample"
+  },
+  "goToPage_Statistics" : {
+    "_id" : "wm-goToPage_Statistics-wm.NavigationVariable-1442928134434",
+    "name" : "goToPage_Statistics",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Statistics"
+  },
+  "Hrdb_ColleagueDetails" : {
+    "_id" : "wm-Hrdb_ColleagueDetails-wm.ServiceVariable-1444457720696",
+    "name" : "Hrdb_ColleagueDetails",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdb_ColleagueDetailsrtnType",
+    "service" : "hrdb",
+    "operation" : "execute_ColleagueDetails",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/_ColleagueDetails",
+      "httpMethod" : "get",
+      "name" : "execute_ColleagueDetails",
+      "parameters" : [ {
+        "name" : "selectedemployeedeptid",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "selectedemployeeid",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ {
+      "isList" : false,
+      "value" : "bind:Widgets.label11.caption || Widgets.EmployeeList.selecteditem.department.deptid | toNumber",
+      "target" : "selectedemployeedeptid"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.label12_2.caption ||Widgets.EmployeeList.selecteditem.eid | toNumber",
+      "target" : "selectedemployeeid"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbDepartmentCount" : {
+    "_id" : "wm-HrdbDepartmentCount-wm.ServiceVariable-1442929307998",
+    "name" : "HrdbDepartmentCount",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbDepartmentCountrtnType",
+    "service" : "hrdb",
+    "operation" : "executeDepartmentCount",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/DepartmentCount",
+      "httpMethod" : "get",
+      "name" : "executeDepartmentCount",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbDepartmentData" : {
+    "_id" : "wm-HrdbDepartmentData-wm.LiveVariable-1442927497415",
+    "name" : "HrdbDepartmentData",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "Department",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "hrdb",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "deptid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "DEPTID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false
+      }, {
+        "fieldName" : "name",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "NAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "budget",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "BUDGET",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "q1",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "Q1",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "q2",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "Q2",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "q3",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "Q3",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "q4",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "Q4",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "deptcode",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "DEPTCODE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "location",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "LOCATION",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "tenantid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TENANTID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      } ],
+      "entityName" : "Department",
+      "fullyQualifiedName" : "com.hrdb.Department",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "deptid" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "DEPARTMENT",
+    "tableType" : "TABLE",
+    "dbSystem" : "HSQLDB",
+    "package" : "com.hrdb.Department"
+  },
+  "HrdbEmployeeData" : {
+    "_id" : "wm-HrdbEmployeeData-wm.LiveVariable-1442927497419",
+    "name" : "HrdbEmployeeData",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "Employee",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "hrdb",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "department",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "DEPTID",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "generator" : "assigned",
+        "isRelated" : true,
+        "relatedTableName" : "DEPARTMENT",
+        "relatedEntityName" : "Department",
+        "relatedFieldName" : "department.deptid",
+        "isList" : false,
+        "targetTable" : "DEPARTMENT",
+        "columns" : [ {
+          "fieldName" : "deptid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "DEPTID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "identity",
+          "isRelated" : false
+        }, {
+          "fieldName" : "name",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "NAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "budget",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "BUDGET",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q1",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q1",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q2",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q2",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q3",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q3",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "q4",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "Q4",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "deptcode",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "DEPTCODE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 20,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "location",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "LOCATION",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "tenantid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "TENANTID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        } ]
+      }, {
+        "fieldName" : "employeeByManagerid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "MANAGERID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "isRelated" : true,
+        "relatedTableName" : "EMPLOYEE",
+        "relatedEntityName" : "Employee",
+        "relatedFieldName" : "employeeByManagerid.eid",
+        "targetTable" : "EMPLOYEE",
+        "columns" : [ {
+          "fieldName" : "department",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "DEPTID",
+          "isPrimaryKey" : false,
+          "notNull" : true,
+          "length" : 255,
+          "generator" : "assigned",
+          "isRelated" : true,
+          "relatedTableName" : "DEPARTMENT",
+          "relatedEntityName" : "Department",
+          "relatedFieldName" : "department.deptid",
+          "isList" : false,
+          "targetTable" : "DEPARTMENT",
+          "columns" : [ {
+            "fieldName" : "deptid",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "DEPTID",
+            "isPrimaryKey" : true,
+            "notNull" : true,
+            "length" : 255,
+            "precision" : 19,
+            "generator" : "identity",
+            "isRelated" : false
+          }, {
+            "fieldName" : "name",
+            "type" : "string",
+            "hibernateType" : "string",
+            "fullyQualifiedType" : "string",
+            "columnName" : "NAME",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "budget",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "BUDGET",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q1",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q1",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q2",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q2",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q3",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q3",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "q4",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "Q4",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "deptcode",
+            "type" : "string",
+            "hibernateType" : "string",
+            "fullyQualifiedType" : "string",
+            "columnName" : "DEPTCODE",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 20,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "location",
+            "type" : "string",
+            "hibernateType" : "string",
+            "fullyQualifiedType" : "string",
+            "columnName" : "LOCATION",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          }, {
+            "fieldName" : "tenantid",
+            "type" : "integer",
+            "hibernateType" : "integer",
+            "fullyQualifiedType" : "integer",
+            "columnName" : "TENANTID",
+            "isPrimaryKey" : false,
+            "notNull" : false,
+            "length" : 255,
+            "precision" : 19,
+            "isRelated" : false
+          } ]
+        }, {
+          "fieldName" : "employeeByManagerid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "MANAGERID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "isRelated" : true,
+          "relatedTableName" : "EMPLOYEE",
+          "relatedEntityName" : "Employee",
+          "targetTable" : "EMPLOYEE"
+        }, {
+          "fieldName" : "eid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "EID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "identity",
+          "isRelated" : false
+        }, {
+          "fieldName" : "firstname",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "FIRSTNAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "lastname",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "LASTNAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "street",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "STREET",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "city",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "CITY",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "state",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "STATE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 2,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "zip",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "ZIP",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "birthdate",
+          "type" : "date",
+          "hibernateType" : "date",
+          "fullyQualifiedType" : "date",
+          "columnName" : "BIRTHDATE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 10,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "picurl",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "PICURL",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "tenantid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "TENANTID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "jobtitle",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "JOBTITLE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 40,
+          "precision" : 19,
+          "isRelated" : false
+        } ]
+      }, {
+        "fieldName" : "eid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "EID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false
+      }, {
+        "fieldName" : "firstname",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "FIRSTNAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "lastname",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "LASTNAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "street",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "STREET",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "city",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "CITY",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "state",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "STATE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 2,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "zip",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ZIP",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "birthdate",
+        "type" : "date",
+        "hibernateType" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "BIRTHDATE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 10,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "picurl",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "PICURL",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "tenantid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TENANTID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "jobtitle",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "JOBTITLE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 40,
+        "precision" : 19,
+        "isRelated" : false
+      } ],
+      "entityName" : "Employee",
+      "fullyQualifiedName" : "com.hrdb.Employee",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "eid" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "EMPLOYEE",
+    "tableType" : "TABLE",
+    "dbSystem" : "HSQLDB",
+    "properties" : [ "department", "employeeByManagerid", "employeesForManagerid" ],
+    "relatedTables" : [ {
+      "columnName" : "department",
+      "relationName" : "department",
+      "type" : "Department",
+      "watchOn" : "HrdbDepartmentData",
+      "package" : "com.hrdb.Employee"
+    }, {
+      "columnName" : "employeeByManagerid",
+      "relationName" : "employeeByManagerid",
+      "type" : "Employee",
+      "watchOn" : "HrdbEmployeeData",
+      "package" : "com.hrdb.Employee"
+    }, {
+      "columnName" : "employeeByManagerid",
+      "relationName" : "employeesForManagerid",
+      "type" : "Employee",
+      "watchOn" : "HrdbEmployeeData",
+      "package" : "com.hrdb.Employee"
+    } ],
+    "package" : "com.hrdb.Employee"
+  },
+  "HrdbEmployeeListOf_DeptId1" : {
+    "_id" : "wm-HrdbEmployeeListOf_DeptId1-wm.ServiceVariable-1442929350571",
+    "name" : "HrdbEmployeeListOf_DeptId1",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbEmployeeListOf_DeptId1rtnType",
+    "service" : "hrdb",
+    "operation" : "executeEmployeeListOf_DeptId1",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/EmployeeListOf_DeptId1",
+      "httpMethod" : "get",
+      "name" : "executeEmployeeListOf_DeptId1",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbEmployeeListOf_DeptId2" : {
+    "_id" : "wm-HrdbEmployeeListOf_DeptId2-wm.ServiceVariable-1442929456021",
+    "name" : "HrdbEmployeeListOf_DeptId2",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbEmployeeListOf_DeptId2rtnType",
+    "service" : "hrdb",
+    "operation" : "executeEmployeeListOf_DeptId2",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/EmployeeListOf_DeptId2",
+      "httpMethod" : "get",
+      "name" : "executeEmployeeListOf_DeptId2",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbEmployeeListOf_Deptid3" : {
+    "_id" : "wm-HrdbEmployeeListOf_Deptid3-wm.ServiceVariable-1444453098705",
+    "name" : "HrdbEmployeeListOf_Deptid3",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbEmployeeListOf_Deptid3rtnType",
+    "service" : "hrdb",
+    "operation" : "executeEmployeeListOf_Deptid3",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/EmployeeListOf_Deptid3",
+      "httpMethod" : "get",
+      "name" : "executeEmployeeListOf_Deptid3",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbEmployeeListOf_DeptId4" : {
+    "_id" : "wm-HrdbEmployeeListOf_DeptId4-wm.ServiceVariable-1443001468892",
+    "name" : "HrdbEmployeeListOf_DeptId4",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbEmployeeListOf_DeptId4rtnType",
+    "service" : "hrdb",
+    "operation" : "executeEmployeeListOf_DeptId4",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/EmployeeListOf_DeptId4",
+      "httpMethod" : "get",
+      "name" : "executeEmployeeListOf_DeptId4",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbEmployeeListOf_DeptId5" : {
+    "_id" : "wm-HrdbEmployeeListOf_DeptId5-wm.ServiceVariable-1443001145741",
+    "name" : "HrdbEmployeeListOf_DeptId5",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbEmployeeListOf_DeptId5rtnType",
+    "service" : "hrdb",
+    "operation" : "executeEmployeeListOf_DeptId5",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/EmployeeListOf_DeptId5",
+      "httpMethod" : "get",
+      "name" : "executeEmployeeListOf_DeptId5",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbEmployeeSelectVar" : {
+    "_id" : "wm-HrdbEmployeeSelectVar-wm.ServiceVariable-1444459574514",
+    "name" : "HrdbEmployeeSelectVar",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbEmployeeSelectVarrtnType",
+    "service" : "hrdb",
+    "operation" : "executeEmployeeSelectVar",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/EmployeeSelectVar",
+      "httpMethod" : "get",
+      "name" : "executeEmployeeSelectVar",
+      "parameters" : [ {
+        "name" : "SelectedEmployee",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.eid || Widgets.search2.datavalue",
+      "target" : "SelectedEmployee"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbNoOfDepartment" : {
+    "_id" : "wm-HrdbNoOfDepartment-wm.ServiceVariable-1444370902279",
+    "name" : "HrdbNoOfDepartment",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbNoOfDepartmentrtnType",
+    "service" : "hrdb",
+    "operation" : "executeNoOfDepartment",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/NoOfDepartment",
+      "httpMethod" : "get",
+      "name" : "executeNoOfDepartment",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbSearchEmployees" : {
+    "_id" : "wm-HrdbSearchEmployees-wm.ServiceVariable-1443691363865",
+    "name" : "HrdbSearchEmployees",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbSearchEmployeesrtnType",
+    "service" : "hrdb",
+    "operation" : "executeSearchEmployees",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/SearchEmployees",
+      "httpMethod" : "get",
+      "name" : "executeSearchEmployees",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbSelectEmployee" : {
+    "_id" : "wm-HrdbSelectEmployee-wm.ServiceVariable-1444451147759",
+    "name" : "HrdbSelectEmployee",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "string",
+    "service" : "hrdb",
+    "operation" : "executeSelectEmployee",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/SelectEmployee",
+      "httpMethod" : "get",
+      "name" : "executeSelectEmployee",
+      "parameters" : [ {
+        "name" : "SearchID",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "LiveListID",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbSelectEmployeeVar" : {
+    "_id" : "wm-HrdbSelectEmployeeVar-wm.ServiceVariable-1443706103436",
+    "name" : "HrdbSelectEmployeeVar",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbSelectEmployeeVarrtnType",
+    "service" : "hrdb",
+    "operation" : "executeSelectEmployeeVar",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/SelectEmployeeVar",
+      "httpMethod" : "get",
+      "name" : "executeSelectEmployeeVar",
+      "parameters" : [ {
+        "name" : "SearchID",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "LiveListID",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue",
+      "target" : "LiveListID"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.eid | toNumber",
+      "target" : "SearchID"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbSrv_Var_EmployeeCount" : {
+    "_id" : "wm-HrdbSrv_Var_EmployeeCount-wm.ServiceVariable-1442930116400",
+    "name" : "HrdbSrv_Var_EmployeeCount",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbSrv_Var_EmployeeCountrtnType",
+    "service" : "hrdb",
+    "operation" : "executeSrv_Var_EmployeeCount",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/Srv_Var_EmployeeCount",
+      "httpMethod" : "get",
+      "name" : "executeSrv_Var_EmployeeCount",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbTotalBudget" : {
+    "_id" : "wm-HrdbTotalBudget-wm.ServiceVariable-1442930148430",
+    "name" : "HrdbTotalBudget",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "hrdbTotalBudgetrtnType",
+    "service" : "hrdb",
+    "operation" : "executeTotalBudget",
+    "operationType" : "get",
+    "serviceType" : "DataService",
+    "serviceSubType" : "query",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/hrdb/queryExecutor/queries/TotalBudget",
+      "httpMethod" : "get",
+      "name" : "executeTotalBudget",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "HrdbUserData" : {
+    "_id" : "wm-HrdbUserData-wm.LiveVariable-1442927497422",
+    "name" : "HrdbUserData",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "User",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "hrdb",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "userid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "USERID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false
+      }, {
+        "fieldName" : "username",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "USERNAME",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "password",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "PASSWORD",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "role",
+        "type" : "string",
+        "hibernateType" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "ROLE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 20,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "tenantid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TENANTID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      } ],
+      "entityName" : "User",
+      "fullyQualifiedName" : "com.hrdb.User",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "userid" ]
+    },
+    "isDefault" : true,
+    "tableName" : "USER",
+    "tableType" : "TABLE",
+    "dbSystem" : "HSQLDB",
+    "package" : "com.hrdb.User"
+  },
+  "HrdbVacationData" : {
+    "_id" : "wm-HrdbVacationData-wm.LiveVariable-1442927497425",
+    "name" : "HrdbVacationData",
+    "owner" : "App",
+    "category" : "wm.LiveVariable",
+    "operation" : "read",
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "Vacation",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "liveSource" : "hrdb",
+    "ignoreCase" : false,
+    "matchMode" : "start",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "employee",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "EMPID",
+        "isPrimaryKey" : false,
+        "notNull" : true,
+        "length" : 255,
+        "generator" : "assigned",
+        "isRelated" : true,
+        "relatedTableName" : "EMPLOYEE",
+        "relatedEntityName" : "Employee",
+        "relatedFieldName" : "employee.eid",
+        "isList" : false,
+        "targetTable" : "EMPLOYEE",
+        "columns" : [ {
+          "fieldName" : "department",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "DEPTID",
+          "isPrimaryKey" : false,
+          "notNull" : true,
+          "length" : 255,
+          "generator" : "assigned",
+          "isRelated" : true,
+          "targetTable" : "DEPARTMENT"
+        }, {
+          "fieldName" : "employeeByManagerid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "MANAGERID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "isRelated" : true,
+          "targetTable" : "EMPLOYEE"
+        }, {
+          "fieldName" : "eid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "EID",
+          "isPrimaryKey" : true,
+          "notNull" : true,
+          "length" : 255,
+          "precision" : 19,
+          "generator" : "identity",
+          "isRelated" : false
+        }, {
+          "fieldName" : "firstname",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "FIRSTNAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "lastname",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "LASTNAME",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "street",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "STREET",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "city",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "CITY",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "state",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "STATE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 2,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "zip",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "ZIP",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "birthdate",
+          "type" : "date",
+          "hibernateType" : "date",
+          "fullyQualifiedType" : "date",
+          "columnName" : "BIRTHDATE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 10,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "picurl",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "PICURL",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "tenantid",
+          "type" : "integer",
+          "hibernateType" : "integer",
+          "fullyQualifiedType" : "integer",
+          "columnName" : "TENANTID",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 255,
+          "precision" : 19,
+          "isRelated" : false
+        }, {
+          "fieldName" : "jobtitle",
+          "type" : "string",
+          "hibernateType" : "string",
+          "fullyQualifiedType" : "string",
+          "columnName" : "JOBTITLE",
+          "isPrimaryKey" : false,
+          "notNull" : false,
+          "length" : 40,
+          "precision" : 19,
+          "isRelated" : false
+        } ]
+      }, {
+        "fieldName" : "id",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 255,
+        "precision" : 19,
+        "generator" : "identity",
+        "isRelated" : false
+      }, {
+        "fieldName" : "startdate",
+        "type" : "date",
+        "hibernateType" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "STARTDATE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 10,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "enddate",
+        "type" : "date",
+        "hibernateType" : "date",
+        "fullyQualifiedType" : "date",
+        "columnName" : "ENDDATE",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 10,
+        "precision" : 19,
+        "isRelated" : false
+      }, {
+        "fieldName" : "tenantid",
+        "type" : "integer",
+        "hibernateType" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "TENANTID",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 19,
+        "isRelated" : false
+      } ],
+      "entityName" : "Vacation",
+      "fullyQualifiedName" : "com.hrdb.Vacation",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "tableName" : "VACATION",
+    "tableType" : "TABLE",
+    "dbSystem" : "HSQLDB",
+    "properties" : [ "employee" ],
+    "relatedTables" : [ {
+      "columnName" : "employee",
+      "relationName" : "employee",
+      "type" : "Employee",
+      "watchOn" : "HrdbEmployeeData",
+      "package" : "com.hrdb.Vacation"
+    } ],
+    "package" : "com.hrdb.Vacation"
+  },
+  "ListGoogleApiInvoke" : {
+    "_id" : "wm-ListGoogleApiInvoke-wm.ServiceVariable-1442932741736",
+    "name" : "ListGoogleApiInvoke",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "type" : "ListGoogleApi.RootResponse",
+    "service" : "ListGoogleApi",
+    "operation" : "invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/ListGoogleApi/invoke",
+      "methodType" : "get",
+      "name" : "invoke",
+      "consumes" : [ "text/xml" ],
+      "parameters" : [ {
+        "name" : "address",
+        "parameterType" : "query"
+      } ]
+    },
+    "dataBinding" : [ {
+      "value" : "bind:Widgets.label14.caption",
+      "target" : "address",
+      "type" : "java.lang.String"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeAll",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1442935664632",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "tenantId" : "",
+      "id" : "",
+      "isSecurityEnabled" : true,
+      "isAuthenticated" : false,
+      "roles" : [ ],
+      "name" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "loginVariable" : {
+    "_id" : "wm-loginVariable-wm.LoginVariable-1442935664629",
+    "name" : "loginVariable",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataSet" : {
+      "username" : "",
+      "password" : ""
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "onError" : "Javascript",
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : false
+  },
+  "logoutVariable" : {
+    "_id" : "wm-logoutVariable-wm.LogoutVariable-1442935664631",
+    "name" : "logoutVariable",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
+  "SearchSelectedEmployee" : {
+    "_id" : "wm-SearchSelectedEmployee-wm.Variable-1443689748155",
+    "name" : "SearchSelectedEmployee",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "zip" : "",
+      "department" : {
+        "budget" : "",
+        "deptid" : "",
+        "q2" : "",
+        "q1" : "",
+        "location" : "",
+        "q4" : "",
+        "deptcode" : "",
+        "name" : "",
+        "q3" : "",
+        "tenantid" : "",
+        "employees" : [ { } ]
+      },
+      "twitterid" : "",
+      "street" : "",
+      "state" : "",
+      "lastname" : "",
+      "picurl" : "",
+      "vacations" : [ {
+        "id" : "",
+        "startdate" : "",
+        "tenantid" : "",
+        "employee" : { },
+        "enddate" : ""
+      } ],
+      "firstname" : "",
+      "eid" : "",
+      "city" : "",
+      "birthdate" : "",
+      "tenantid" : "",
+      "employee" : { },
+      "employees" : [ { } ]
+    },
+    "dataBinding" : [ {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.ZIP",
+      "target" : "zip",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.department.NAME",
+      "target" : "department",
+      "type" : "com.hrdb.Department"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.STREET",
+      "target" : "street",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.STATE",
+      "target" : "state",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.LASTNAME",
+      "target" : "lastname",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.PICURL",
+      "target" : "picurl",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.FIRSTNAME",
+      "target" : "firstname",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.CITY",
+      "target" : "city",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.search2.datavalue.BIRTHDATE",
+      "target" : "birthdate",
+      "type" : "java.util.Date"
+    } ],
+    "type" : "com.hrdb.Employee",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "SelectedEmployeeDetails" : {
+    "_id" : "wm-SelectedEmployeeDetails-wm.Variable-1442934115640",
+    "name" : "SelectedEmployeeDetails",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "zip" : "",
+      "department" : {
+        "budget" : "",
+        "deptid" : "",
+        "q2" : "",
+        "q1" : "",
+        "location" : "",
+        "q4" : "",
+        "deptcode" : "",
+        "name" : "",
+        "q3" : "",
+        "tenantid" : "",
+        "employees" : [ { } ]
+      },
+      "twitterid" : "",
+      "street" : "",
+      "state" : "",
+      "lastname" : "",
+      "picurl" : "",
+      "vacations" : [ {
+        "id" : "",
+        "startdate" : "",
+        "tenantid" : "",
+        "employee" : { },
+        "enddate" : ""
+      } ],
+      "firstname" : "",
+      "eid" : "",
+      "city" : "",
+      "birthdate" : "",
+      "tenantid" : "",
+      "employee" : { },
+      "employees" : [ { } ]
+    },
+    "dataBinding" : [ {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.zip",
+      "target" : "zip",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.department",
+      "target" : "department",
+      "type" : "com.hrdb.Department"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.twitterid",
+      "target" : "twitterid",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.street",
+      "target" : "street",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.state",
+      "target" : "state",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.lastname",
+      "target" : "lastname",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.picurl",
+      "target" : "picurl",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : true,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.vacations",
+      "target" : "vacations",
+      "type" : "com.hrdb.Vacation"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.firstname",
+      "target" : "firstname",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.eid",
+      "target" : "eid",
+      "type" : "java.lang.Integer"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.city",
+      "target" : "city",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.birthdate",
+      "target" : "birthdate",
+      "type" : "java.util.Date"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.tenantid",
+      "target" : "tenantid",
+      "type" : "java.lang.Integer"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.employee",
+      "target" : "employee",
+      "type" : "com.hrdb.Employee"
+    }, {
+      "isList" : true,
+      "value" : "bind:Widgets.EmployeeGrid1.selecteditem.employees",
+      "target" : "employees",
+      "type" : "com.hrdb.Employee"
+    } ],
+    "type" : "com.hrdb.Employee",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "SelectedEmployeeList" : {
+    "_id" : "wm-SelectedEmployeeList-wm.Variable-1442932409395",
+    "name" : "SelectedEmployeeList",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "zip" : "",
+      "department" : {
+        "budget" : "",
+        "deptid" : "",
+        "q2" : "",
+        "q1" : "",
+        "location" : "",
+        "q4" : "",
+        "deptcode" : "",
+        "name" : "",
+        "q3" : "",
+        "tenantid" : "",
+        "employees" : [ { } ]
+      },
+      "twitterid" : "",
+      "street" : "",
+      "state" : "",
+      "lastname" : "",
+      "picurl" : "",
+      "vacations" : [ {
+        "id" : "",
+        "startdate" : "",
+        "tenantid" : "",
+        "employee" : { },
+        "enddate" : ""
+      } ],
+      "firstname" : "",
+      "eid" : "",
+      "city" : "",
+      "birthdate" : "",
+      "tenantid" : "",
+      "employee" : { },
+      "employees" : [ { } ]
+    },
+    "dataBinding" : [ {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.zip ",
+      "target" : "zip",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.department",
+      "target" : "department",
+      "type" : "com.hrdb.Department"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.twitterid",
+      "target" : "twitterid",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.street ",
+      "target" : "street",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.state ",
+      "target" : "state",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.lastname ",
+      "target" : "lastname",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.picurl ",
+      "target" : "picurl",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : true,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.vacations",
+      "target" : "vacations",
+      "type" : "com.hrdb.Vacation"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.firstname",
+      "target" : "firstname",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.eid",
+      "target" : "eid",
+      "type" : "java.lang.Integer"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.city ",
+      "target" : "city",
+      "type" : "java.lang.String"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.birthdate",
+      "target" : "birthdate",
+      "type" : "java.util.Date"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.tenantid",
+      "target" : "tenantid",
+      "type" : "java.lang.Integer"
+    }, {
+      "isList" : false,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.employee",
+      "target" : "employee",
+      "type" : "com.hrdb.Employee"
+    }, {
+      "isList" : true,
+      "value" : "bind:Widgets.EmployeeList.selecteditem.employees",
+      "target" : "employees",
+      "type" : "com.hrdb.Employee"
+    } ],
+    "type" : "com.hrdb.Employee",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-supportedLocale-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "dataBinding" : [ ],
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  }
+}

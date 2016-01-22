@@ -1,0 +1,65 @@
+<style id="sample.css">
+
+</style>
+<script id="sample.js">
+Application.$controller("samplePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action with the variables inside this block(on-page-load) */
+    $scope.onPageVariablesReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. $scope.Variables.staticVariable1.getData()
+         */
+    };
+    
+    /* perform any action with widgets inside this block */
+    $scope.onPageReady = function () {
+        /*
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. $scope.Widgets.byId(), $scope.Widgets.byName()or access widgets by $scope.Widgets.widgetName
+         */
+    };
+
+}]);
+
+</script>
+<script id="sample.variables.json">
+var _samplePage_Variables_ ={ }
+</script>
+<script id="sample.html" type="text/ng-template">
+<wm-page data-ng-controller="samplePageController" name="page1">
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-composite name="composite1">
+                <wm-label class="col-md-3" name="label1"></wm-label>
+                <wm-container class="col-md-9" name="container1">
+                    <wm-select name="select1" dataset="bind:Variables.HrdbEmployeeData.dataSet" datafield="All Fields" displayexpression="bind:$[data[$i].zip]" datavalue="bind:'select any'" placeholder="Select"></wm-select>
+                </wm-container>
+            </wm-composite>
+            <wm-composite name="composite2">
+                <wm-label class="col-md-3" name="label2"></wm-label>
+                <wm-container class="col-md-9" name="container2">
+                    <wm-select name="select2"></wm-select>
+                </wm-container>
+            </wm-composite>
+            <wm-nav type="pills" name="nav1">
+                <wm-nav-item name="nav_item1">
+                    <wm-anchor caption="Link 1" name="anchor1"></wm-anchor>
+                </wm-nav-item>
+                <wm-nav-item name="nav_item2">
+                    <wm-anchor caption="Link 2" name="anchor2"></wm-anchor>
+                </wm-nav-item>
+                <wm-nav-item name="nav_item3">
+                    <wm-anchor caption="Link 3" name="anchor3"></wm-anchor>
+                </wm-nav-item>
+            </wm-nav>
+            <wm-navbar title="Brand" name="navbar1">
+                <wm-nav type="navbar" class="navbar-left" name="nav2"></wm-nav>
+                <wm-nav type="navbar" class="navbar-right" name="nav3"></wm-nav>
+            </wm-navbar>
+            <wm-breadcrumb dataset="Home, Page,Select" name="breadcrumb1"></wm-breadcrumb>
+        </wm-page-content>
+    </wm-content>
+</wm-page>
+</script>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="ListGoogleApi" type="RestService" springFile="ListGoogleApi.spring.xml">
+    <operation name="invoke">
+        <parameter name="address" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="ListGoogleApi.RootResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="ListGoogleApi.geometry" name="geometry" supportsQuickData="false">
+            <element name="bounds" typeRef="ListGoogleApi.bounds" isList="false" allowNull="false"/>
+            <element name="viewport" typeRef="ListGoogleApi.viewport" isList="false" allowNull="false"/>
+            <element name="location_type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="location" typeRef="ListGoogleApi.location" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.address_componentsEntryItem" name="address_componentsEntryItem" supportsQuickData="false">
+            <element name="long_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="types" typeRef="java.lang.String" isList="true" allowNull="false"/>
+            <element name="short_name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.viewport" name="viewport" supportsQuickData="false">
+            <element name="southwest" typeRef="ListGoogleApi.southwest" isList="false" allowNull="false"/>
+            <element name="northeast" typeRef="ListGoogleApi.northeast" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.RootResponse" name="RootResponse" supportsQuickData="false">
+            <element name="results" typeRef="ListGoogleApi.resultsEntryItem" isList="true" allowNull="false"/>
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.bounds" name="bounds" supportsQuickData="false">
+            <element name="southwest" typeRef="ListGoogleApi.southwest" isList="false" allowNull="false"/>
+            <element name="northeast" typeRef="ListGoogleApi.northeast" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.northeast" name="northeast" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.location" name="location" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.southwest" name="southwest" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="ListGoogleApi.resultsEntryItem" name="resultsEntryItem" supportsQuickData="false">
+            <element name="place_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="address_components" typeRef="ListGoogleApi.address_componentsEntryItem" isList="true" allowNull="false"/>
+            <element name="formatted_address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="types" typeRef="java.lang.String" isList="true" allowNull="false"/>
+            <element name="geometry" typeRef="ListGoogleApi.geometry" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
