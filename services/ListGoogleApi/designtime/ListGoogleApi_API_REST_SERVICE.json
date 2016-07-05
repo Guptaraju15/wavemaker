@@ -1,13 +1,13 @@
 {
+  "basePath" : "/",
   "tags" : [ {
     "description" : "Rest service swagger documentation",
     "name" : "RestServiceVirtualController"
   } ],
-  "basePath" : "/maps/api/geocode/json",
   "paths" : {
-    "" : {
+    "/ListGoogleApi/invoke" : {
       "x-WM-TAG" : "RestServiceVirtualController",
-      "x-WM-BASE_PATH" : "",
+      "x-WM-BASE_PATH" : "/ListGoogleApi/invoke",
       "get" : {
         "x-WM-OPERATION_UID" : "6ab00ec4-da0d-409a-afbc-11215a6ccbab",
         "tags" : [ "RestServiceVirtualController" ],
@@ -36,7 +36,7 @@
     }
   },
   "host" : "maps.googleapis.com",
-  "schemes" : [ "https" ],
+  "schemes" : [ "http", "https" ],
   "swagger" : "2.0",
   "definitions" : {
     "bounds" : {

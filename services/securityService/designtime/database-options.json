@@ -1,1 +1,19 @@
-{"modelName":"hrdb","entityName":"User","tableName":"USER","unamePropertyName":"USERNAME","unameColumnName":"USERNAME","uidPropertyName":"USERID","uidColumnName":"USERID","pwPropertyName":"PASSWORD","pwColumnName":"PASSWORD","rolePropertyName":"ROLE","roleColumnName":"ROLE","useRolesQuery":false,"rolesByUsernameQuery":"","tenantIdField":null,"defTenantId":0,"tenantIdPropertyName":null}
+{
+  "modelName" : "hrdb",
+  "entityName" : "User",
+  "tableName" : "USER",
+  "unamePropertyName" : "username",
+  "unameColumnName" : "USERNAME",
+  "uidPropertyName" : "userid",
+  "uidColumnName" : "USERID",
+  "pwPropertyName" : "password",
+  "pwColumnName" : "PASSWORD",
+  "rolePropertyName" : "",
+  "roleColumnName" : "",
+  "useRolesQuery" : true,
+  "rolesByUsernameQuery" : "SELECT USERID, ROLE FROM USER WHERE USERNAME = ?",
+  "tenantIdField" : null,
+  "defTenantId" : 0,
+  "tenantIdPropertyName" : null,
+  "queryType" : "SQL"
+}

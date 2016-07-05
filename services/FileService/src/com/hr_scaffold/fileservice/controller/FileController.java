@@ -24,27 +24,30 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
-    @RequestMapping(value = "/downloadFile", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    @RequestMapping(value = "/uploadFile", method = RequestMethod.POST)
+    public FileUploadResponse[] uploadFile(@RequestPart(value = "files") MultipartFile[] files, @RequestParam(value = "relativePath", required = false) String relativePath, HttpServletRequest httpServletRequest) {
+        return fileService.uploadFile(files, relativePath, httpServletRequest);
+    }
+
+    @RequestMapping(value = "/downloadFile", produces = "application/octet-stream", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public DownloadResponse getDownloadFile(@RequestParam(value = "file", required = false) String file, @RequestParam(value = "returnName", required = false) String returnName) throws Exception {
         return fileService.getDownloadFile(file, returnName);
     }
 
-    @RequestMapping(value = "/downloadFileAsInline", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+    @RequestMapping(value = "/downloadFileAsInline", produces = "application/octet-stream", method = RequestMethod.GET)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public DownloadResponse getDownloadFileAsInline(@RequestParam(value = "file", required = false) String file, @RequestParam(value = "returnName", required = false) String returnName) throws Exception {
         return fileService.getDownloadFileAsInline(file, returnName);
     }
 
-    @RequestMapping(value = "/file", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.DELETE)
+    @RequestMapping(value = "/file", method = RequestMethod.DELETE)
+    @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public boolean deleteFile(@RequestParam(value = "file", required = false) String file) throws IOException {
         return fileService.deleteFile(file);
     }
 
-    @RequestMapping(value = "/uploadFile", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
-    public FileUploadResponse[] uploadFile(@RequestPart MultipartFile[] files, @RequestParam(value = "relativePath", required = false) String relativePath, HttpServletRequest httpServletRequest) {
-        return fileService.uploadFile(files, relativePath, httpServletRequest);
-    }
-
-    @RequestMapping(value = "/files", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.POST)
+    @RequestMapping(value = "/files", method = RequestMethod.POST)
     @WMAccessVisibility(value = AccessSpecifier.APP_ONLY)
     public WMFile[] listFiles(HttpServletRequest httpServletRequest) throws IOException {
         return fileService.listFiles(httpServletRequest);

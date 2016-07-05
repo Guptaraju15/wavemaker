@@ -10,7 +10,23 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : "hrdbEmployeeListOf_DeptId1rtnType"
+    "outputType" : "hrdbEmployeeListOf_DeptId1rtnType",
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.String",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "JOBTITLE" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "EmployeeListOf_DeptId2",
     "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 2",
@@ -20,7 +36,23 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : "hrdbEmployeeListOf_DeptId2rtnType"
+    "outputType" : "hrdbEmployeeListOf_DeptId2rtnType",
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.String",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "JOBTITLE" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "Srv_Var_EmployeeCount",
     "query" : "SELECT COUNT(eid) FROM Employee",
@@ -30,7 +62,10 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : "hrdbSrv_Var_EmployeeCountrtnType"
+    "outputType" : "hrdbSrv_Var_EmployeeCountrtnType",
+    "returnTypeMetadata" : {
+      "C1" : "java.math.BigInteger"
+    }
   }, {
     "name" : "TotalBudget",
     "query" : "SELECT SUM(budget) FROM department",
@@ -40,7 +75,10 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "C1" : "java.math.BigInteger"
+    }
   }, {
     "name" : "checking",
     "query" : "select * from employee",
@@ -50,7 +88,8 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : { }
   }, {
     "name" : "EmploteeList",
     "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 4",
@@ -60,7 +99,8 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : { }
   }, {
     "name" : "EmployeeListOf_DeptId5",
     "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 5",
@@ -70,7 +110,23 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : "hrdbEmployeeListOf_DeptId5rtnType"
+    "outputType" : "hrdbEmployeeListOf_DeptId5rtnType",
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.String",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "JOBTITLE" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "EmployeeListOf_DeptId4",
     "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 4",
@@ -80,7 +136,23 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.Integer",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "JOBTITLE" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "SearchEmployees",
     "query" : "select E.*,D.NAME from EMPLOYEE E,DEPARTMENT D where E.DEPTID=D.DEPTID",
@@ -90,7 +162,23 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.String",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "JOBTITLE" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "NoOfDepartment",
     "query" : "SELECT COUNT(NAME) FROM DEPARTMENT",
@@ -100,7 +188,10 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "C1" : "java.math.BigInteger"
+    }
   }, {
     "name" : "SelectEmployeeVar",
     "query" : "select * from Employee E where eid=:SearchID or eid=:LiveListID",
@@ -124,7 +215,22 @@
       "systemParam" : false,
       "list" : false
     } ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "STATE" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "CITY" : "java.lang.String",
+      "STREET" : "java.lang.String",
+      "JOBTITLE" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "MANAGERID" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "SelectEmployee",
     "query" : "select * from Employee E where eid=:SearchID or eid=:LiveListID",
@@ -148,7 +254,22 @@
       "systemParam" : false,
       "list" : false
     } ],
-    "outputType" : "hrdbSelectEmployeertnType"
+    "outputType" : "hrdbSelectEmployeertnType",
+    "returnTypeMetadata" : {
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "STATE" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "JOBTITLE" : "java.lang.String",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "CITY" : "java.lang.String",
+      "STREET" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "MANAGERID" : "java.lang.String",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "EmployeeListOf_Deptid3",
     "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID = 3",
@@ -158,7 +279,23 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.String",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "JOBTITLE" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "_ColleagueDetails",
     "query" : "select e.*,d.Name from Employee e,Department d where e.DEPTID = d.DEPTID and e.DEPTID =:selectedemployeedeptid AND e.EID !=:selectedemployeeid",
@@ -182,7 +319,23 @@
       "systemParam" : false,
       "list" : false
     } ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "STATE" : "java.lang.String",
+      "NAME" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "STREET" : "java.lang.String",
+      "MANAGERID" : "java.lang.String",
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "JOBTITLE" : "java.lang.String",
+      "CITY" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "EmployeeSelectVar",
     "query" : "select * from employee where eid=:SelectedEmployee",
@@ -199,7 +352,22 @@
       "systemParam" : false,
       "list" : false
     } ],
-    "outputType" : null
+    "outputType" : null,
+    "returnTypeMetadata" : {
+      "PICURL" : "java.lang.String",
+      "FIRSTNAME" : "java.lang.String",
+      "STATE" : "java.lang.String",
+      "ZIP" : "java.lang.String",
+      "BIRTHDATE" : "java.sql.Date",
+      "JOBTITLE" : "java.lang.String",
+      "TENANTID" : "java.lang.Integer",
+      "EID" : "java.lang.Integer",
+      "CITY" : "java.lang.String",
+      "STREET" : "java.lang.String",
+      "DEPTID" : "java.lang.Integer",
+      "MANAGERID" : "java.lang.Integer",
+      "LASTNAME" : "java.lang.String"
+    }
   }, {
     "name" : "DepartmentCount",
     "query" : "SELECT COUNT(NAME) FROM DEPARTMENT",
@@ -209,6 +377,9 @@
     "returnsSingleResult" : false,
     "update" : false,
     "queryParams" : [ ],
-    "outputType" : "hrdbDepartmentCountrtnType"
+    "outputType" : "hrdbDepartmentCountrtnType",
+    "returnTypeMetadata" : {
+      "C1" : "java.math.BigInteger"
+    }
   } ]
 }

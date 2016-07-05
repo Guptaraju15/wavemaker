@@ -12,6 +12,12 @@
     <operation operationType="nativequery" name="TotalBudget">
         <return typeRef="hrdbTotalBudgetrtnType" isList="false"/>
     </operation>
+    <operation operationType="nativequery" name="checking">
+        <return typeRef="hrdbcheckingrtnType" isList="false"/>
+    </operation>
+    <operation operationType="nativequery" name="EmploteeList">
+        <return typeRef="hrdbEmploteeListrtnType" isList="false"/>
+    </operation>
     <operation operationType="nativequery" name="EmployeeListOf_DeptId5">
         <return typeRef="hrdbEmployeeListOf_DeptId5rtnType" isList="false"/>
     </operation>
@@ -21,13 +27,13 @@
     <operation operationType="nativequery" name="SearchEmployees">
         <return typeRef="hrdbSearchEmployeesrtnType" isList="false"/>
     </operation>
-    <operation operationType="nativequery" name="SelectEmployeeVar">
-        <parameter name="LiveListID" typeRef="java.lang.Integer" isList="false"/>
-        <parameter name="SearchID" typeRef="java.lang.Integer" isList="false"/>
-        <return typeRef="hrdbSelectEmployeeVarrtnType" isList="false"/>
-    </operation>
     <operation operationType="nativequery" name="NoOfDepartment">
         <return typeRef="hrdbNoOfDepartmentrtnType" isList="false"/>
+    </operation>
+    <operation operationType="nativequery" name="SelectEmployeeVar">
+        <parameter name="SearchID" typeRef="java.lang.Integer" isList="false"/>
+        <parameter name="LiveListID" typeRef="java.lang.Integer" isList="false"/>
+        <return typeRef="hrdbSelectEmployeeVarrtnType" isList="false"/>
     </operation>
     <operation operationType="nativequery" name="SelectEmployee">
         <parameter name="SearchID" typeRef="java.lang.Integer" isList="false"/>
@@ -50,52 +56,49 @@
         <return typeRef="hrdbDepartmentCountrtnType" isList="false"/>
     </operation>
     <dataobjects>
+        <dataobject javaType="com.hrdb.User">
+            <element name="username" typeRef="java.lang.String" allowNull="true"/>
+            <element name="userid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="role" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tenantid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="password" typeRef="java.lang.String" allowNull="true"/>
+        </dataobject>
         <dataobject javaType="com.hrdb.Employee">
-            <element name="eid" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="department" typeRef="com.hrdb.Department" isList="false" allowNull="true"/>
-            <element name="employee" typeRef="com.hrdb.Employee" isList="false" allowNull="true"/>
-            <element name="firstname" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="lastname" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="street" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="city" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="state" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="zip" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="birthdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="picurl" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="tenantid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="jobtitle" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="employees" typeRef="com.hrdb.Employee" isList="true" allowNull="true"/>
+            <element name="zip" typeRef="java.lang.String" allowNull="true"/>
+            <element name="department" typeRef="com.hrdb.Department" allowNull="true"/>
+            <element name="street" typeRef="java.lang.String" allowNull="true"/>
+            <element name="state" typeRef="java.lang.String" allowNull="true"/>
+            <element name="lastname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="picurl" typeRef="java.lang.String" allowNull="true"/>
             <element name="vacations" typeRef="com.hrdb.Vacation" isList="true" allowNull="true"/>
+            <element name="firstname" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeesForManagerid" typeRef="com.hrdb.Employee" isList="true" allowNull="true"/>
+            <element name="eid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="city" typeRef="java.lang.String" allowNull="true"/>
+            <element name="employeeByManagerid" typeRef="com.hrdb.Employee" allowNull="true"/>
+            <element name="jobtitle" typeRef="java.lang.String" allowNull="true"/>
+            <element name="birthdate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="tenantid" typeRef="java.lang.Integer" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.hrdb.Vacation">
-            <element name="id" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="employee" typeRef="com.hrdb.Employee" isList="false" allowNull="false"/>
-            <element name="startdate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="enddate" typeRef="java.util.Date" isList="false" allowNull="true"/>
-            <element name="tenantid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="id" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="startdate" typeRef="java.util.Date" allowNull="true"/>
+            <element name="tenantid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="employee" typeRef="com.hrdb.Employee" allowNull="true"/>
+            <element name="enddate" typeRef="java.util.Date" allowNull="true"/>
         </dataobject>
         <dataobject javaType="com.hrdb.Department">
-            <element name="deptid" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="name" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="budget" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="q1" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="q2" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="q3" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="q4" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-            <element name="deptcode" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="location" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="tenantid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
+            <element name="budget" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="deptid" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="q2" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="location" typeRef="java.lang.String" allowNull="true"/>
+            <element name="q1" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="deptcode" typeRef="java.lang.String" allowNull="true"/>
+            <element name="q4" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="q3" typeRef="java.lang.Integer" allowNull="true"/>
+            <element name="name" typeRef="java.lang.String" allowNull="true"/>
+            <element name="tenantid" typeRef="java.lang.Integer" allowNull="true"/>
             <element name="employees" typeRef="com.hrdb.Employee" isList="true" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="com.hrdb.User">
-            <element name="userid" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
-            <element name="username" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="password" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="role" typeRef="java.lang.String" isList="false" allowNull="true"/>
-            <element name="tenantid" typeRef="java.lang.Integer" isList="false" allowNull="true"/>
-        </dataobject>
-        <dataobject javaType="hrdbDepartmentCountrtnType">
-            <element name="C1" typeRef="java.math.BigInteger"/>
         </dataobject>
         <dataobject javaType="hrdbEmployeeListOf_DeptId1rtnType">
             <element name="STATE" typeRef="java.lang.String"/>
@@ -135,6 +138,8 @@
         <dataobject javaType="hrdbTotalBudgetrtnType">
             <element name="C1" typeRef="java.math.BigInteger"/>
         </dataobject>
+        <dataobject javaType="hrdbcheckingrtnType"/>
+        <dataobject javaType="hrdbEmploteeListrtnType"/>
         <dataobject javaType="hrdbEmployeeListOf_DeptId5rtnType">
             <element name="STATE" typeRef="java.lang.String"/>
             <element name="NAME" typeRef="java.lang.String"/>
@@ -183,6 +188,9 @@
             <element name="JOBTITLE" typeRef="java.lang.String"/>
             <element name="LASTNAME" typeRef="java.lang.String"/>
         </dataobject>
+        <dataobject javaType="hrdbNoOfDepartmentrtnType">
+            <element name="C1" typeRef="java.math.BigInteger"/>
+        </dataobject>
         <dataobject javaType="hrdbSelectEmployeeVarrtnType">
             <element name="PICURL" typeRef="java.lang.String"/>
             <element name="FIRSTNAME" typeRef="java.lang.String"/>
@@ -197,9 +205,6 @@
             <element name="DEPTID" typeRef="java.lang.Integer"/>
             <element name="MANAGERID" typeRef="java.lang.String"/>
             <element name="LASTNAME" typeRef="java.lang.String"/>
-        </dataobject>
-        <dataobject javaType="hrdbNoOfDepartmentrtnType">
-            <element name="C1" typeRef="java.math.BigInteger"/>
         </dataobject>
         <dataobject javaType="hrdbSelectEmployeertnType">
             <element name="PICURL" typeRef="java.lang.String"/>
@@ -262,6 +267,9 @@
             <element name="DEPTID" typeRef="java.lang.Integer"/>
             <element name="MANAGERID" typeRef="java.lang.Integer"/>
             <element name="LASTNAME" typeRef="java.lang.String"/>
+        </dataobject>
+        <dataobject javaType="hrdbDepartmentCountrtnType">
+            <element name="C1" typeRef="java.math.BigInteger"/>
         </dataobject>
     </dataobjects>
 </service>

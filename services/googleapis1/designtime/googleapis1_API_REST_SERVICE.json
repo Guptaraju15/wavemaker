@@ -1,21 +1,28 @@
 {
+  "basePath" : "/",
   "tags" : [ {
     "description" : "Rest service swagger documentation",
     "name" : "RestServiceVirtualController"
   } ],
-  "basePath" : "/maps/api/geocode/json",
   "paths" : {
-    "" : {
+    "/googleapis1/invoke" : {
       "x-WM-TAG" : "RestServiceVirtualController",
-      "x-WM-BASE_PATH" : "",
+      "x-WM-BASE_PATH" : "/googleapis1/invoke",
       "get" : {
-        "x-WM-OPERATION_UID" : "6ab00ec4-da0d-409a-afbc-11215a6ccbab",
+        "x-WM-OPERATION_UID" : "c5cc9955-c4d5-4382-aed7-ada5d781b211",
         "tags" : [ "RestServiceVirtualController" ],
         "x-WM-METHOD_NAME" : "invoke",
         "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
         "parameters" : [ {
           "description" : "address",
           "name" : "address",
+          "x-WM-EDITABLE" : false,
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        }, {
+          "description" : "key",
+          "name" : "key",
           "x-WM-EDITABLE" : false,
           "type" : "string",
           "required" : false,
@@ -30,17 +37,17 @@
             "description" : "Success"
           }
         },
-        "operationId" : "ListGoogleApi_RestServiceVirtualController-invoke"
+        "operationId" : "googleapis1_RestServiceVirtualController-invoke"
       },
       "x-WM-RELATIVE_PATH" : ""
     }
   },
   "host" : "maps.googleapis.com",
-  "schemes" : [ "https" ],
+  "schemes" : [ "http", "https" ],
   "swagger" : "2.0",
   "definitions" : {
     "bounds" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.bounds",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.bounds",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "southwest" : {
@@ -52,7 +59,7 @@
       }
     },
     "RootResponse" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.RootResponse",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.RootResponse",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "results" : {
@@ -68,7 +75,7 @@
       }
     },
     "viewport" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.viewport",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.viewport",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "southwest" : {
@@ -80,7 +87,7 @@
       }
     },
     "location" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.location",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.location",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "lng" : {
@@ -94,7 +101,7 @@
       }
     },
     "resultsEntryItem" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.resultsEntryItem",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.resultsEntryItem",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "place_id" : {
@@ -123,7 +130,7 @@
       }
     },
     "address_componentsEntryItem" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.address_componentsEntryItem",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.address_componentsEntryItem",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "long_name" : {
@@ -142,7 +149,7 @@
       }
     },
     "southwest" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.southwest",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.southwest",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "lng" : {
@@ -156,7 +163,7 @@
       }
     },
     "northeast" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.northeast",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.northeast",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "lng" : {
@@ -170,7 +177,7 @@
       }
     },
     "geometry" : {
-      "x-WM-FULLY_QUALIFIED_NAME" : "ListGoogleApi.geometry",
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.geometry",
       "x-WM-TAGS" : [ "RestServiceVirtualController" ],
       "properties" : {
         "bounds" : {
@@ -190,7 +197,7 @@
   },
   "info" : {
     "x-WM-SERVICE_TYPE" : "RestService",
-    "x-WM-API_ID" : "997f826c-12a5-4a2f-afcb-247e8e1fc668",
+    "x-WM-API_ID" : "0bbd8f7b-c5eb-4ec2-9233-1ab490dd30ee",
     "x-WM-SERVICE_ID" : "googleapis",
     "version" : "2.0"
   }

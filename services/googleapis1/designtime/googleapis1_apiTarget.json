@@ -1,1 +1,204 @@
-{"swagger":"2.0","info":{"version":"2.0","x-WM-SERVICE_TYPE":"RestService","x-WM-API_ID":"0bbd8f7b-c5eb-4ec2-9233-1ab490dd30ee","x-WM-SERVICE_ID":"googleapis"},"host":"maps.googleapis.com","basePath":"/maps/api/geocode/json","tags":[{"name":"RestServiceVirtualController","description":"Rest service swagger documentation"}],"schemes":["https"],"paths":{"":{"get":{"tags":["RestServiceVirtualController"],"operationId":"invoke","consumes":["text/xml"],"parameters":[{"name":"address","in":"query","description":"address","required":false,"type":"string","x-WM-EDITABLE":false},{"name":"key","in":"query","description":"key","required":false,"type":"string","x-WM-EDITABLE":false}],"responses":{"200":{"description":"Success","schema":{"$ref":"#/definitions/RootResponse"}}},"x-WM-OPERATION_UID":"c5cc9955-c4d5-4382-aed7-ada5d781b211","x-WM-ACCESS_SPECIFIER":"APP_ONLY","x-WM-METHOD_IDENTIFIER":"invoke"},"x-WM-BASE_PATH":"","x-WM-TAG":"RestServiceVirtualController","x-WM-RELATIVE_PATH":""}},"definitions":{"bounds":{"properties":{"southwest":{"$ref":"#/definitions/southwest"},"northeast":{"$ref":"#/definitions/northeast"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.bounds","x-WM-TAGS":["RestServiceVirtualController"]},"viewport":{"properties":{"southwest":{"$ref":"#/definitions/southwest"},"northeast":{"$ref":"#/definitions/northeast"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.viewport","x-WM-TAGS":["RestServiceVirtualController"]},"RootResponse":{"properties":{"results":{"type":"array","items":{"$ref":"#/definitions/resultsEntryItem"},"x-WM-IS_LIST":true},"status":{"type":"string"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.RootResponse","x-WM-TAGS":["RestServiceVirtualController"]},"location":{"properties":{"lng":{"type":"number","format":"double"},"lat":{"type":"number","format":"double"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.location","x-WM-TAGS":["RestServiceVirtualController"]},"resultsEntryItem":{"properties":{"place_id":{"type":"string"},"address_components":{"type":"array","items":{"$ref":"#/definitions/address_componentsEntryItem"},"x-WM-IS_LIST":true},"formatted_address":{"type":"string"},"types":{"type":"array","items":{"type":"string"},"x-WM-IS_LIST":true},"geometry":{"$ref":"#/definitions/geometry"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.resultsEntryItem","x-WM-TAGS":["RestServiceVirtualController"]},"southwest":{"properties":{"lng":{"type":"number","format":"double"},"lat":{"type":"number","format":"double"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.southwest","x-WM-TAGS":["RestServiceVirtualController"]},"address_componentsEntryItem":{"properties":{"long_name":{"type":"string"},"short_name":{"type":"string"},"types":{"type":"array","items":{"type":"string"},"x-WM-IS_LIST":true}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.address_componentsEntryItem","x-WM-TAGS":["RestServiceVirtualController"]},"northeast":{"properties":{"lng":{"type":"number","format":"double"},"lat":{"type":"number","format":"double"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.northeast","x-WM-TAGS":["RestServiceVirtualController"]},"geometry":{"properties":{"bounds":{"$ref":"#/definitions/bounds"},"viewport":{"$ref":"#/definitions/viewport"},"location_type":{"type":"string"},"location":{"$ref":"#/definitions/location"}},"x-WM-FULLY_QUALIFIED_NAME":"googleapis1.geometry","x-WM-TAGS":["RestServiceVirtualController"]}}}
+{
+  "tags" : [ {
+    "description" : "Rest service swagger documentation",
+    "name" : "RestServiceVirtualController"
+  } ],
+  "basePath" : "/maps/api/geocode/json",
+  "paths" : {
+    "" : {
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-BASE_PATH" : "",
+      "get" : {
+        "x-WM-OPERATION_UID" : "c5cc9955-c4d5-4382-aed7-ada5d781b211",
+        "tags" : [ "RestServiceVirtualController" ],
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "parameters" : [ {
+          "description" : "address",
+          "name" : "address",
+          "x-WM-EDITABLE" : false,
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        }, {
+          "description" : "key",
+          "name" : "key",
+          "x-WM-EDITABLE" : false,
+          "type" : "string",
+          "required" : false,
+          "in" : "query"
+        } ],
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "operationId" : "googleapis1_RestServiceVirtualController-invoke"
+      },
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "host" : "maps.googleapis.com",
+  "schemes" : [ "https" ],
+  "swagger" : "2.0",
+  "definitions" : {
+    "bounds" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.bounds",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/northeast"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "results" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/resultsEntryItem"
+          },
+          "type" : "array"
+        },
+        "status" : {
+          "type" : "string"
+        }
+      }
+    },
+    "viewport" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.viewport",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "southwest" : {
+          "$ref" : "#/definitions/southwest"
+        },
+        "northeast" : {
+          "$ref" : "#/definitions/northeast"
+        }
+      }
+    },
+    "location" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.location",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "resultsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.resultsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "place_id" : {
+          "type" : "string"
+        },
+        "address_components" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "$ref" : "#/definitions/address_componentsEntryItem"
+          },
+          "type" : "array"
+        },
+        "formatted_address" : {
+          "type" : "string"
+        },
+        "types" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "geometry" : {
+          "$ref" : "#/definitions/geometry"
+        }
+      }
+    },
+    "address_componentsEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.address_componentsEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "long_name" : {
+          "type" : "string"
+        },
+        "types" : {
+          "x-WM-IS_LIST" : true,
+          "items" : {
+            "type" : "string"
+          },
+          "type" : "array"
+        },
+        "short_name" : {
+          "type" : "string"
+        }
+      }
+    },
+    "southwest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.southwest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "northeast" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.northeast",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "lng" : {
+          "format" : "double",
+          "type" : "number"
+        },
+        "lat" : {
+          "format" : "double",
+          "type" : "number"
+        }
+      }
+    },
+    "geometry" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "googleapis1.geometry",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "properties" : {
+        "bounds" : {
+          "$ref" : "#/definitions/bounds"
+        },
+        "viewport" : {
+          "$ref" : "#/definitions/viewport"
+        },
+        "location_type" : {
+          "type" : "string"
+        },
+        "location" : {
+          "$ref" : "#/definitions/location"
+        }
+      }
+    }
+  },
+  "info" : {
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "0bbd8f7b-c5eb-4ec2-9233-1ab490dd30ee",
+    "x-WM-SERVICE_ID" : "googleapis",
+    "version" : "2.0"
+  }
+}
