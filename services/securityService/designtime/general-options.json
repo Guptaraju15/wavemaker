@@ -4,8 +4,11 @@
     "enabled" : true,
     "tokenValiditySeconds" : 1296000
   },
-  "useSSL" : false,
-  "sslPort" : "443",
+  "sslConfig" : {
+    "sslPort" : 443,
+    "useSSL" : false,
+    "excludedUrls" : null
+  },
   "authProviders" : [ "DATABASE" ],
   "login" : {
     "type" : "PAGE",

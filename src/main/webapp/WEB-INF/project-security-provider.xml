@@ -94,6 +94,12 @@
                 <property name="tokenValiditySeconds" value="1296000"/>
             </bean>
         </property>
+        <property name="sslConfig">
+            <bean class="com.wavemaker.studio.common.model.security.SSLConfig">
+                <property name="useSSL" value="false"/>
+                <property name="sslPort" value="443"/>
+            </bean>
+        </property>
     </bean>
     <security:authentication-manager id="authenticationManager">
         <security:authentication-provider ref="databaseAuthenticationProvider"/>
@@ -128,7 +134,7 @@
         <property name="continueFilterChainOnUnsuccessfulAuthentication" value="true"/>
     </bean>
     <bean class="org.springframework.security.web.authentication.logout.LogoutFilter" id="logoutFilter">
-        <constructor-arg value="/"/>
+        <constructor-arg ref="logoutSuccessHandler"/>
         <constructor-arg>
             <list>
                 <ref bean="securityContextLogoutHandler"/>
@@ -178,4 +184,9 @@
             <value>SELECT USERID, ROLE FROM USER WHERE USERNAME = ?</value>
         </property>
     </bean>
+    <bean class="org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler" id="logoutSuccessHandler">
+        <property name="defaultTargetUrl" value="/"/>
+        <property name="redirectStrategy" ref="redirectStrategyBean"/>
+    </bean>
+    <bean class="org.springframework.security.web.DefaultRedirectStrategy" id="redirectStrategyBean"/>
 </beans>
